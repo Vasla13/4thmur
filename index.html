@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#060819">
+    <meta name="description" content="Studios du Quatrième Mur présente un catalogue corporate d'archives vidéo immersives.">
+    <meta property="og:title" content="Studios du Quatrième Mur">
+    <meta property="og:description" content="Archives vidéo privées. Interface corporate cyberpunk.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/logo-quatrieme-mur.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Studios du Quatrième Mur</title>
+    <link rel="icon" type="image/png" href="assets/logo-quatrieme-mur.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="site-noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Studios du Quatrième Mur">
+        <img src="assets/logo-quatrieme-mur.png" alt="">
+        <span>
+          <strong>Quatrième Mur</strong>
+          <small>Private media system</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Ouvrir la navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Navigation principale">
+        <a href="#catalogue">Index</a>
+        <a href="#contact">Accès</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="command-hero" aria-label="Interface Studios du Quatrième Mur">
+        <div class="hero-terminal">
+          <p class="eyebrow">MUR-04 / Archive node</p>
+          <h1>Quatrième Mur</h1>
+          <p class="hero-line">Catalogue confidentiel d'expériences vidéo. Aucun flux public. Accès sur demande.</p>
+
+          <div class="status-strip" role="group" aria-label="État du catalogue">
+            <span><strong>06</strong> dossiers</span>
+            <span><strong>03</strong> niveaux</span>
+            <span><strong>LIVE</strong> index</span>
+          </div>
+        </div>
+
+        <aside class="identity-panel" aria-label="Identité système">
+          <div class="logo-frame">
+            <img src="assets/logo-quatrieme-mur.png" alt="Logo Studios du Quatrième Mur">
+          </div>
+          <div class="identity-readout">
+            <span>SDQM_CORE</span>
+            <strong>Signal stable</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="archive-section" id="catalogue">
+        <div class="archive-heading">
+          <div>
+            <p class="eyebrow">Index audiovisuel</p>
+            <h2>Archives</h2>
+          </div>
+
+          <div class="filters" role="group" aria-label="Filtrer le catalogue">
+            <button class="filter-button is-active" type="button" data-filter="all">Tout</button>
+            <button class="filter-button" type="button" data-filter="signature">Signature</button>
+            <button class="filter-button" type="button" data-filter="prototype">Prototype</button>
+            <button class="filter-button" type="button" data-filter="archive">Archive</button>
+          </div>
+        </div>
+
+        <div class="archive-console">
+          <aside class="dossier-panel" aria-label="Dossier sélectionné">
+            <p class="panel-label">Dossier actif</p>
+            <h3 id="detailTitle">Protocole 04</h3>
+            <p id="detailText">Film manifeste: interface froide, lumière violette, contrôle total.</p>
+
+            <dl class="detail-grid">
+              <div>
+                <dt>Code</dt>
+                <dd id="detailCode">SDQM-001</dd>
+              </div>
+              <div>
+                <dt>Accès</dt>
+                <dd id="detailAccess">Niveau A</dd>
+              </div>
+              <div>
+                <dt>Durée</dt>
+                <dd id="detailRuntime">02:10</dd>
+              </div>
+              <div>
+                <dt>État</dt>
+                <dd id="detailState">Validé</dd>
+              </div>
+            </dl>
+
+            <div class="signal-meter" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </aside>
+
+          <div class="archive-list" role="group" aria-label="Dossiers vidéo">
+            <button class="archive-item is-selected" type="button" data-category="signature" data-code="SDQM-001" data-title="Protocole 04" data-text="Film manifeste: interface froide, lumière violette, contrôle total." data-access="Niveau A" data-runtime="02:10" data-state="Validé">
+              <span class="item-index">01</span>
+              <span class="item-main">
+                <strong>Protocole 04</strong>
+                <small>Manifeste corporate / contrôle total</small>
+              </span>
+              <span class="item-type">Signature</span>
+            </button>
+
+            <button class="archive-item" type="button" data-category="archive" data-code="SDQM-017" data-title="Bleu Zéro" data-text="Ville nocturne, signal bas, horizon effacé." data-access="Niveau B" data-runtime="01:34" data-state="Indexé">
+              <span class="item-index">02</span>
+              <span class="item-main">
+                <strong>Bleu Zéro</strong>
+                <small>Ville basse / signal faible</small>
+              </span>
+              <span class="item-type">Archive</span>
+            </button>
+
+            <button class="archive-item" type="button" data-category="prototype" data-code="SDQM-029" data-title="Memory Leak" data-text="Fragments d'identité, glitch doux, narration instable." data-access="R&amp;D" data-runtime="00:58" data-state="Prototype">
+              <span class="item-index">03</span>
+              <span class="item-main">
+                <strong>Memory Leak</strong>
+                <small>Identité fragmentée / test neural</small>
+              </span>
+              <span class="item-type">Prototype</span>
+            </button>
+
+            <button class="archive-item" type="button" data-category="signature" data-code="SDQM-034" data-title="Salle Miroir" data-text="Architecture corporate, reflets noirs, tension clinique." data-access="Niveau A" data-runtime="01:48" data-state="Validé">
+              <span class="item-index">04</span>
+              <span class="item-main">
+                <strong>Salle Miroir</strong>
+                <small>Verre noir / surveillance interne</small>
+              </span>
+              <span class="item-type">Signature</span>
+            </button>
+
+            <button class="archive-item" type="button" data-category="prototype" data-code="SDQM-041" data-title="Vox Underground" data-text="Canal pirate, voix compressées, néons souterrains." data-access="R&amp;D" data-runtime="01:12" data-state="Test">
+              <span class="item-index">05</span>
+              <span class="item-main">
+                <strong>Vox Underground</strong>
+                <small>Canal pirate / audio dégradé</small>
+              </span>
+              <span class="item-type">Prototype</span>
+            </button>
+
+            <button class="archive-item" type="button" data-category="archive" data-code="SDQM-052" data-title="Après Minuit" data-text="Dernière trace avant coupure du signal." data-access="Niveau B" data-runtime="00:46" data-state="Scellé">
+              <span class="item-index">06</span>
+              <span class="item-main">
+                <strong>Après Minuit</strong>
+                <small>Signal final / ville muette</small>
+              </span>
+              <span class="item-type">Archive</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="contact-copy">
+          <p class="eyebrow">Accès</p>
+          <h2>Demande privée.</h2>
+          <p>Le webhook sera branché ici.</p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <label>
+            <span>Nom</span>
+            <input name="name" type="text" autocomplete="name" required>
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+
+          <label class="message-field">
+            <span>Message</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+
+          <label class="trap-field" aria-hidden="true">
+            <span>Site web</span>
+            <input name="website" type="text" tabindex="-1" autocomplete="off">
+          </label>
+
+          <button class="primary-link" type="submit">Envoyer</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Studios du Quatrième Mur</span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
