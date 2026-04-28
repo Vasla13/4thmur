@@ -8,7 +8,7 @@
     <meta property="og:title" content="Quatrième Mur — Danses Sensorielles">
     <meta property="og:description" content="DS haut de gamme. Catalogue privé. Expériences neurales sur mesure.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="public/assets/logo-quatrieme-mur.png">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Vasla13/4thmur/main/public/assets/logo-quatrieme-mur.png">
     <meta name="twitter:card" content="summary_large_image">
     <title>Quatrième Mur — Danses Sensorielles</title>
     <link rel="icon" type="image/png" href="public/assets/favicon-64.png">
@@ -57,33 +57,7 @@
           </div>
         </div>
 
-        <div class="scroll-hint" aria-hidden="true">
-          <span>Scroll</span>
-          <div class="scroll-line"></div>
-        </div>
       </section>
-
-      <div class="sys-bar reveal">
-        <div class="sys-item">
-          <span class="sys-val" data-count="6">0</span>
-          <span class="sys-label">DS disponibles</span>
-        </div>
-        <div class="sys-divider"></div>
-        <div class="sys-item">
-          <span class="sys-val">3</span>
-          <span class="sys-label">Gammes</span>
-        </div>
-        <div class="sys-divider"></div>
-        <div class="sys-item">
-          <span class="sys-val">100%</span>
-          <span class="sys-label">Fidélité neurale</span>
-        </div>
-        <div class="sys-divider"></div>
-        <div class="sys-item">
-          <span class="sys-status"><span class="status-dot"></span></span>
-          <span class="sys-label">Lecteur DS actif</span>
-        </div>
-      </div>
 
       <section class="archive-section" id="catalogue">
         <div class="archive-heading reveal">
@@ -93,65 +67,25 @@
           </div>
 
           <div class="filters" role="group" aria-label="Filtrer le catalogue">
-            <button class="filter-button is-active" type="button" data-filter="all">Tout <span class="filter-count">6</span></button>
-            <button class="filter-button" type="button" data-filter="signature">Élite <span class="filter-count">2</span></button>
-            <button class="filter-button" type="button" data-filter="prototype">Expérimental <span class="filter-count">2</span></button>
-            <button class="filter-button" type="button" data-filter="archive">Classique <span class="filter-count">2</span></button>
+            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Tout <span class="filter-count">6</span></button>
+            <button class="filter-button" type="button" data-filter="signature" aria-pressed="false">Élite <span class="filter-count">2</span></button>
+            <button class="filter-button" type="button" data-filter="prototype" aria-pressed="false">Expérimental <span class="filter-count">2</span></button>
+            <button class="filter-button" type="button" data-filter="archive" aria-pressed="false">Classique <span class="filter-count">2</span></button>
           </div>
         </div>
 
         <div class="archive-console">
-          <div class="shard-jukebox" id="jukebox" role="group" aria-label="Danses Sensorielles">
+          <div class="shard-jukebox" id="jukebox" role="group" aria-label="Danses Sensorielles" data-catalogue-url="src/data/catalogue.json"></div>
 
-            <button class="shard-item" type="button" data-category="signature">
-              <span class="shard-tag">Élite</span>
-              <div class="shard-pins"><span></span><span></span><span></span><span></span><span></span></div>
-              <span class="shard-id">DS-001</span>
-              <strong class="shard-title">Blackout Kabuki</strong>
-              <div class="shard-chip"></div>
-            </button>
-
-            <button class="shard-item" type="button" data-category="archive">
-              <span class="shard-tag">Classique</span>
-              <div class="shard-pins"><span></span><span></span><span></span><span></span><span></span></div>
-              <span class="shard-id">DS-017</span>
-              <strong class="shard-title">Neon Requiem</strong>
-              <div class="shard-chip"></div>
-            </button>
-
-            <button class="shard-item" type="button" data-category="prototype">
-              <span class="shard-tag">Expérimental</span>
-              <div class="shard-pins"><span></span><span></span><span></span><span></span><span></span></div>
-              <span class="shard-id">DS-029</span>
-              <strong class="shard-title">Synapse Ghost</strong>
-              <div class="shard-chip"></div>
-            </button>
-
-            <button class="shard-item" type="button" data-category="signature">
-              <span class="shard-tag">Élite</span>
-              <div class="shard-pins"><span></span><span></span><span></span><span></span><span></span></div>
-              <span class="shard-id">DS-034</span>
-              <strong class="shard-title">Chrome Vertigo</strong>
-              <div class="shard-chip"></div>
-            </button>
-
-            <button class="shard-item" type="button" data-category="prototype">
-              <span class="shard-tag">Expérimental</span>
-              <div class="shard-pins"><span></span><span></span><span></span><span></span><span></span></div>
-              <span class="shard-id">DS-041</span>
-              <strong class="shard-title">Red Ice Loop</strong>
-              <div class="shard-chip"></div>
-            </button>
-
-            <button class="shard-item" type="button" data-category="archive">
-              <span class="shard-tag">Classique</span>
-              <div class="shard-pins"><span></span><span></span><span></span><span></span><span></span></div>
-              <span class="shard-id">DS-052</span>
-              <strong class="shard-title">Afterlife Pulse</strong>
-              <div class="shard-chip"></div>
-            </button>
-
-          </div>
+          <aside class="intel-bubble" id="intelBubble" aria-live="polite" aria-hidden="true">
+            <div class="intel-frame">
+              <span class="intel-kicker">DS_INTEL</span>
+              <strong class="intel-title">Survolez une DS</strong>
+              <p class="intel-desc">Les détails du shard apparaîtront ici.</p>
+              <div class="intel-grid"></div>
+              <button class="intel-request" type="button">Demander cette DS</button>
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -163,7 +97,7 @@
             <p class="contact-desc">Transmettez vos coordonnées pour recevoir un accès privé à notre catalogue de Danses Sensorielles. Livraison discrète, shard chiffré.</p>
           </div>
 
-          <form class="contact-form reveal" id="contactForm">
+          <form class="contact-form reveal" id="contactForm" method="post" action="/api/contact">
             <label>
               <span>Nom</span>
               <input name="name" type="text" autocomplete="name" placeholder="—" required>
@@ -178,6 +112,11 @@
               <span>Message</span>
               <textarea name="message" rows="4" placeholder="—" required></textarea>
             </label>
+
+            <input name="danceId" type="hidden">
+            <input name="danceTitle" type="hidden">
+
+            <p class="selected-ds" id="selectedDs" hidden></p>
 
             <label class="trap-field" aria-hidden="true">
               <span>Site web</span>
@@ -199,7 +138,7 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <div class="footer-brand">
-          <img src="public/assets/logo-quatrieme-mur-web.png" alt="" width="24" height="24">
+          <img src="public/assets/favicon-64.png" alt="" width="24" height="24">
           <span>© <span id="year"></span> Quatrième Mur — Night City</span>
         </div>
         <div class="footer-meta">
